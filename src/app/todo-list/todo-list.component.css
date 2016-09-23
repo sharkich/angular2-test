@@ -1,0 +1,11 @@
+li:hover {
+  background: #eee;
+}
+
+.id {
+    color: #666;
+}
+
+.active, .active:hover {
+  background: #666;
+}

@@ -1,0 +1,24 @@
+<h2>TODO List</h2>
+<p>
+  todo-list works!
+</p>
+
+<p *ngIf="isLoading">Loading...</p>
+
+<ul *ngIf="!isLoading">
+  <li
+    *ngFor="let todo of todos"
+    [ngClass]="{'active': todo === activeTodo}"
+    (click)="onClick(todo)"
+  >
+    <a [routerLink]="['/todo/', todo.id]">
+      <span class="id">{{todo.id}}</span>
+      <span class="title">{{todo.title}}</span>
+    </a>
+  </li>
+</ul>
+
+<div *ngIf="activeTodo">
+  <hr>
+  <app-todo-details [todo]="activeTodo"></app-todo-details>
+</div>

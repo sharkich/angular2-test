@@ -1,0 +1,3 @@
+<ul>
+  <li *ngFor="let menu of menus" [ngClass]="{'active': menu === activeMenu}"><a routerLink="{{menu.link}}" (click)="onClick(menu)">{{menu.title}}</a></li>
+</ul>
