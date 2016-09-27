@@ -5,6 +5,9 @@ import { HttpModule } from '@angular/http';
 
 import { routing } from './app.routing';
 
+import { MdButtonModule } from '@angular2-material/button';
+import { MdCardModule } from '@angular2-material/card';
+
 import { AppComponent } from './app.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { TopMenuComponent } from './top-menu/top-menu.component';
@@ -25,7 +28,11 @@ import { TodoDetailsComponent } from './todo-details/todo-details.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing
+
+    routing,
+
+    MdCardModule,
+    MdButtonModule
   ],
   providers: [
     TodoService
