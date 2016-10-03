@@ -1,5 +1,8 @@
 import { Injectable } from '@angular/core';
-import {Todo} from './todo'
+
+export class Todo {
+  constructor(public id: number, public title?: string) {}
+}
 
 @Injectable()
 export class TodoService {

@@ -12,4 +12,8 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
+  onCounterChange(res) {
+    console.log('onCounterChange', res);
+  }
+
 }

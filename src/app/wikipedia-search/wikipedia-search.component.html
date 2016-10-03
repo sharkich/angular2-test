@@ -1,0 +1,17 @@
+<md-card>
+  <md-card-subtitle>Search</md-card-subtitle>
+  <md-card-title>Wikipedia</md-card-title>
+  <md-card-content>
+
+    <p><input type="search" [(ngModel)]="searchString" (keyup)="search()"></p>
+    <p>{{searchString}}</p>
+    <ul>
+      <li *ngFor="let item of searchResults">{{item}}</li>
+    </ul>
+
+  </md-card-content>
+  <md-card-actions>
+    <button md-button>LIKE</button>
+    <button md-button>SHARE</button>
+  </md-card-actions>
+</md-card>

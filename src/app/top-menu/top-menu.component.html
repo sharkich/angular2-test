@@ -1,3 +1,25 @@
 <ul>
+  <li>{{title}}</li>
   <li *ngFor="let menu of menus" [ngClass]="{'active': menu === activeMenu}"><a routerLink="{{menu.link}}" (click)="onClick(menu)">{{menu.title}}</a></li>
 </ul>
+
+
+/src
+    app/
+        shared/
+            todo.service.ts
+            todo.service.spec.ts
+            todo.ts
+        todo-list/
+            todo-list.component.ts
+            todo-list.component.html
+            todo-list.component.css
+            todo-list.component.spec.ts
+        todo-details/
+        app.component.ts
+        app.component.spec.ts
+    assets/
+        imgs/
+        fonts/
+    index.html
+    main.ts

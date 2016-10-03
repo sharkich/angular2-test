@@ -1,3 +1,4 @@
+// Service
 import { Component, OnInit } from '@angular/core';
 import { TodoService } from '../shared/todo.service';
 import { Todo } from '../shared/todo';
@@ -12,7 +13,7 @@ export class TodoListComponent implements OnInit {
   private isLoading = true;
   private activeTodo: Todo;
 
-  constructor(private todoService: TodoService,) { }
+  constructor(private todoService: TodoService) { }
 
   ngOnInit() {
     this.todoService.getList()

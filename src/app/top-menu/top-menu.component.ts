@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 interface Menu {
   id: number;
@@ -25,6 +25,8 @@ const MENU: Menu[] = [
   styleUrls: ['./top-menu.component.css']
 })
 export class TopMenuComponent implements OnInit {
+
+  @Input() title: string;
 
   private activeMenu: Menu;
   constructor() {

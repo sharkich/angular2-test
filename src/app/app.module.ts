@@ -1,7 +1,9 @@
+// app.module.ts
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpModule, JsonpModule } from '@angular/http';
 
 import { routing } from './app.routing';
 
@@ -15,6 +17,9 @@ import { TopMenuComponent } from './top-menu/top-menu.component';
 import { TodoService } from './shared/todo.service';
 import { HomeComponent } from './home/home.component';
 import { TodoDetailsComponent } from './todo-details/todo-details.component';
+import { WikipediaSearchComponent } from './wikipedia-search/wikipedia-search.component';
+import { WikipediaSearchService } from './wikipedia-search/wikipedia-search.service';
+import { HelloWorldComponent } from './hello-world/hello-world.component';
 
 @NgModule({
   declarations: [
@@ -22,12 +27,16 @@ import { TodoDetailsComponent } from './todo-details/todo-details.component';
     TodoListComponent,
     TopMenuComponent,
     HomeComponent,
-    TodoDetailsComponent
+    TodoDetailsComponent,
+    WikipediaSearchComponent,
+    HelloWorldComponent,
+    // CounterComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    JsonpModule,
 
     routing,
 
@@ -35,7 +44,8 @@ import { TodoDetailsComponent } from './todo-details/todo-details.component';
     MdButtonModule
   ],
   providers: [
-    TodoService
+    TodoService,
+    WikipediaSearchService
   ],
   bootstrap: [AppComponent]
 })
